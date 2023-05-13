@@ -15,9 +15,14 @@ class TV:
         self.volumeLevel = int(volumeLevel)
     # on: bool
         self.on = on
+
 # Methods:
     # turnon: None
+    def TurnOn(self):
+        self.on = True
     # turnoff: None
+    def TurnOff(self):
+        self.on = False
     # getChannel: int
     # setChannel(channel: int): None
     # getVolume: int
@@ -26,3 +31,7 @@ class TV:
     # channelDown: None
     # volumeUp: None
     # volumeDown: None
+
+tv = TV(1, 13, False)
+tv.TurnOn()
+print("TV is on", tv.on)
