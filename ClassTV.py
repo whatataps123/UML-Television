@@ -6,10 +6,15 @@
 
 # pseudocode
 # create class TV
+class TV:
 # constructor
+    def __init__(self, channel, volumeLevel, on):
     # channel: int
+        self.channel = int(channel)
     # volumeLevel: int
+        self.volumeLevel = int(volumeLevel)
     # on: bool
+        self.on = on
 # Methods:
     # turnon: None
     # turnoff: None
