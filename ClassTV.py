@@ -16,7 +16,7 @@ class TV:
     # volumeLevel: int (Volume is from 1-7)
         self.volumeLevel = int(volumeLevel)
     # on: bool (on/off or True/False initially False assume tv is off)
-        self.on = True
+        self.on = False
 
 # Methods:
     def show(self):
@@ -24,27 +24,55 @@ class TV:
     # turnon: None (Turns on TV)
     def TurnOn(self):
         self.on = True
-        print("on")
     # turnoff: None (Turns off TV)
     def TurnOff(self):
         self.on = False
-        print("off")
     # getChannel: int (Returns channel of TV)
     def getChannel(self):
         return self.channel
-    print(3)
     # setChannel(channel: int): None (Sets new channel of TV)
     def setChannel(self, new_channel):
         if new_channel >=1 and new_channel <= 120:
             self.channel = new_channel
     # getVolume: int (gets/returns volume level of TV)
+    def getVolume(self):
+        return self.volumeLevel
     # setVolume(volumeLevel: int): None (Sets new volume of TV)
+    def setVolume(self, new_volume):
+        if new_volume >=1 and new_volume <= 7:
+            self.volumeLevel = new_volume
     # channelUp: None (Increment channel by 1)
+    def channelUp(self):
+        if self.channel < 120:
+            self.channel += 1
+        else:
+            self.channel = 1
     # channelDown: None (Decrement channel by 1)
+    def channelDown(self):
+        if self.channel > 1:
+            self.channel -= 1
+        else:
+            self.channel = 120   
     # volumeUp: None (Increment volume by 1)
+    def volumeUp(self):
+        if self.volumeLevel < 7:
+            self.volumeLevel += 1
+        else:
+            self.volumeLevel = 1
     # volumeDown: None (Decrement channel by 1)
+    def volumeDown(self):
+        if self.volumeLevel > 1:
+            self.volumeLevel -= 1
+        else:
+            self.volumeLevel = 0
+# try
+tv_1 = TV(30, 3, True)
+tv_2 = TV(3, 2, True)
+tv_1.show()
+tv_1.setChannel(39)
+tv_1.setVolume(5)
+tv_1.channelDown()
+tv_1.volumeUp()
+tv_1.show()
 
-tv = TV(1, 13, False)
-tv.show()
-tv.TurnOn()
-print("TV is on", tv.on)
+tv_2.show()
