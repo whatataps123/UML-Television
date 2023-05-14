@@ -66,15 +66,24 @@ class TV:
         else:
             self.volumeLevel = 0
 # try
-tv_1 = TV(30, 3, False)
-tv_2 = TV(3, 2, True)
-tv_1.show()
-tv_1.setChannel(39)
-tv_1.setVolume(1)
-tv_1.channelDown()
-tv_1.volumeDown()
-tv_1.channelDown()
-tv_1.volumeDown()
-tv_1.show()
+# tv_1 = TV()
+# tv_2 = TV()
+# tv_1.show()
+# print("====")
+# tv_1.setChannel(120) #120
+# tv_1.setVolume(1)
+# tv_1.show()
+# print("====")
+# tv_1.channelUp() #1
+# tv_1.show()
+# print("===")
+# tv_1.channelDown() #120
+# tv_1.show()
+# print("====")
+# tv_1.channelDown()
+# tv_1.volumeDown()
+# tv_1.channelDown()
+# tv_1.volumeDown()
+# tv_1.show()
 
-tv_2.show()
+# tv_2.show()
