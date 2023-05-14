@@ -10,13 +10,13 @@
 # create class TV
 class TV:
 # constructor
-    def __init__(self, channel, volumeLevel, on):
+    def __init__(self, channel=1, volumeLevel=1, on=False):
     # channel: int (Channel is from 1-120)
         self.channel = int(channel)
     # volumeLevel: int (Volume is from 1-7)
         self.volumeLevel = int(volumeLevel)
     # on: bool (on/off or True/False initially False assume tv is off)
-        self.on = False
+        self.on = on
 
 # Methods:
     def show(self):
@@ -59,20 +59,22 @@ class TV:
             self.volumeLevel += 1
         else:
             self.volumeLevel = 1
-    # volumeDown: None (Decrement channel by 1)
+    # volumeDown: None (Decrement volume by 1)
     def volumeDown(self):
         if self.volumeLevel > 1:
             self.volumeLevel -= 1
         else:
             self.volumeLevel = 0
 # try
-tv_1 = TV(30, 3, True)
+tv_1 = TV(30, 3, False)
 tv_2 = TV(3, 2, True)
 tv_1.show()
 tv_1.setChannel(39)
-tv_1.setVolume(5)
+tv_1.setVolume(1)
 tv_1.channelDown()
-tv_1.volumeUp()
+tv_1.volumeDown()
+tv_1.channelDown()
+tv_1.volumeDown()
 tv_1.show()
 
 tv_2.show()
