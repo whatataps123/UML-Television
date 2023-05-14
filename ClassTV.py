@@ -20,7 +20,7 @@ class TV:
 
 # Methods:
     def show(self):
-        print(self.channel, self.volumeLevel, self.on)
+        print("The TV is at channel:", self.channel, "It has a volume of:", self.volumeLevel,"It is on:", self.on)
     # turnon: None (Turns on TV)
     def TurnOn(self):
         self.on = True
@@ -65,25 +65,3 @@ class TV:
             self.volumeLevel -= 1
         else:
             self.volumeLevel = 0
-# try
-# tv_1 = TV()
-# tv_2 = TV()
-# tv_1.show()
-# print("====")
-# tv_1.setChannel(120) #120
-# tv_1.setVolume(1)
-# tv_1.show()
-# print("====")
-# tv_1.channelUp() #1
-# tv_1.show()
-# print("===")
-# tv_1.channelDown() #120
-# tv_1.show()
-# print("====")
-# tv_1.channelDown()
-# tv_1.volumeDown()
-# tv_1.channelDown()
-# tv_1.volumeDown()
-# tv_1.show()
-
-# tv_2.show()
