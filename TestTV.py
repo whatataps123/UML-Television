@@ -1,7 +1,7 @@
 # Import the from file ClassTV.py the class of TV
 import time
 import sys
-from ClassTV import TV
+from TV import TV
 
 # Do Methods for TestTV
 def TestTV():
